@@ -27,24 +27,26 @@
         </div>
     <nav class="navbar">
             <form class="mood-selector">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdown-menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Mood Select
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2" id="moodDropdown">
                       <button class="dropdown-item" type="button" id="creative">Creative</button>
                       <button class="dropdown-item" type="button" id="bummed">Bummed</button>
                       <button class="dropdown-item" type="button" id="chill">Chill</button>
                       <button class="dropdown-item" type="button" id="party">Party</button>
                       <button class="dropdown-item" type="button" id="working">Working</button>
                       <button class="dropdown-item" type="button" id="feeling-good">Feeling Good</button>
-                    </form>
-                  </div>
+                      <button class="dropdown-item" type="button" id="romantic">Romantical</button>
+                      <button class="dropdown-item" type="button" id="lonely">Lonely</button>
+                    </div>
+            </form>
     </nav>
     <div class="main-body">
     <div class="card-deck justify-content-center">
       <div id="spotify-card">
-        <img src="..." class="card-img-top" alt="..." />
         <div class="card-body">
+            <iframe></iframe>
           <h5 class="card-title">Spotify</h5>
           <p class="card-text">
             This is a wider card with supporting text below as a natural lead-in
@@ -56,8 +58,9 @@
         </div>
       </div>
       <div id="youtube-card">
-              <img src="..." class="card-img-top" alt="..." />
               <div class="card-body">
+                  <div id="player">
+                      <iframe class="youtube" src=""></iframe>
             <h5 class="card-title">YouTube</h5>
             <p class="card-text">
               This is a wider card with supporting text below as a natural lead-in
@@ -67,10 +70,11 @@
           <div class="card-footer">
             <small class="text-muted">Last updated 3 mins ago</small>
         </div>
+      </div>
     </div>
     </div>
     </div>
-</div>
+
     <div class="main-footer">
             <large class="text-muted">Last updated 3 mins ago</large>
         </div>
@@ -88,5 +92,6 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
+      <script src="assets/javascript/youtube.js"></script>
   </body>
 </html>
