@@ -1,0 +1,125 @@
+
+body{
+    background-color: black;
+}
+.main-body { 
+    background: linear-gradient(210deg, #000000, #ff0000, #000000, #ff5c00, #000000, #ffe300, #d70f0f);
+    background-size: 1400% 1400%;
+    
+    -webkit-animation: Mad 6s ease infinite;
+    -moz-animation: Mad 6s ease infinite;
+    animation: Mad 6s ease infinite;
+}
+    
+    @-webkit-keyframes Mad {
+        0%{background-position:0% 94%}
+        50%{background-position:100% 7%}
+        100%{background-position:0% 94%}
+    }
+    @-moz-keyframes Mad {
+        0%{background-position:0% 94%}
+        50%{background-position:100% 7%}
+        100%{background-position:0% 94%}
+    }
+    @keyframes Mad {
+        0%{background-position:0% 94%}
+        50%{background-position:100% 7%}
+        100%{background-position:0% 94%}
+    }
+
+
+
+.navbar {
+    
+    justify-content: center;
+}
+
+.card-deck {
+    
+    padding-top: 1%;
+    margin:auto;
+    height:600px;
+}
+
+#spotify-card, #youtube-card {
+    max-width:600px;
+    color:white;
+    
+
+}
+
+.mood-selector{
+
+    align-content: center;
+    vertical-align: 20%;
+
+}
+
+.main-footer {
+    background: linear-gradient(210deg, #000000, #ff0000, #000000, #ff5c00, #000000, #ffe300, #d70f0f);
+    background-size: 1400% 1400%;
+    
+    -webkit-animation: Mad 6s ease infinite;
+    -moz-animation: Mad 6s ease infinite;
+    animation: Mad 6s ease infinite;
+}
+    
+    @-webkit-keyframes Mad {
+        0%{background-position:0% 94%}
+        50%{background-position:100% 7%}
+        100%{background-position:0% 94%}
+    }
+    @-moz-keyframes Mad {
+        0%{background-position:0% 94%}
+        50%{background-position:100% 7%}
+        100%{background-position:0% 94%}
+    }
+    @keyframes Mad {
+        0%{background-position:0% 94%}
+        50%{background-position:100% 7%}
+        100%{background-position:0% 94%}
+}
+
+
+.jumbotron {
+    align-items: center;
+    
+    background: linear-gradient(210deg, #000000, #ff0000, #000000, #ff5c00, #000000, #ffe300, #d70f0f);
+background-size: 1400% 1400%;
+
+-webkit-animation: Mad 6s ease infinite;
+-moz-animation: Mad 6s ease infinite;
+animation: Mad 6s ease infinite;
+}
+
+@-webkit-keyframes Mad {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@-moz-keyframes Mad {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@keyframes Mad {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+
+
+.display-4 {
+    z-index: 6;
+}
+
+#title-container {
+    background-color: black;
+    max-width: 30%;
+    color:white;
+    margin:0 auto;
+    text-align: center;
+    
+    
+
+}

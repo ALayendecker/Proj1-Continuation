@@ -1,0 +1,126 @@
+
+body{
+    background-color: black;
+}
+.main-body { 
+    background: linear-gradient(10deg, #053a05, #1a8509, #0076ff, #031e00, #106702, #ff7e00);
+background-size: 1200% 1200%;
+
+-webkit-animation: Motivated 5s ease infinite;
+-moz-animation: Motivated 5s ease infinite;
+animation: Motivated 5s ease infinite;
+}
+
+@-webkit-keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@-moz-keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+    
+    }
+
+
+
+.navbar {
+    
+    justify-content: center;
+}
+
+.card-deck {
+    
+    padding-top: 1%;
+    margin:auto;
+    height:600px;
+}
+
+#spotify-card, #youtube-card {
+    max-width:600px;
+    color:white;
+    
+
+}
+
+.mood-selector{
+
+    align-content: center;
+    vertical-align: 20%;
+
+}
+
+.main-footer {
+    background: linear-gradient(10deg, #053a05, #1a8509, #0076ff, #031e00, #106702, #ff7e00);
+background-size: 1200% 1200%;
+
+-webkit-animation: Motivated 5s ease infinite;
+-moz-animation: Motivated 5s ease infinite;
+animation: Motivated 5s ease infinite;
+}
+@-webkit-keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@-moz-keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+    
+}
+
+
+.jumbotron {
+    align-items: center;
+    
+    background: linear-gradient(10deg, #053a05, #1a8509, #0076ff, #031e00, #106702, #ff7e00);
+background-size: 1200% 1200%;
+
+-webkit-animation: Motivated 5s ease infinite;
+-moz-animation: Motivated 5s ease infinite;
+animation: Motivated 5s ease infinite;
+}
+
+@-webkit-keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@-moz-keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@keyframes Motivated {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+
+
+.display-4 {
+    z-index: 6;
+}
+
+#title-container {
+    background-color: black;
+    max-width: 30%;
+    color:white;
+    margin:0 auto;
+    text-align: center;
+    
+    
+
+}

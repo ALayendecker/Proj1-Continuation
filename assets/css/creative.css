@@ -1,0 +1,127 @@
+
+body{
+    background-color: black;
+}
+.main-body { 
+    background: linear-gradient(192deg, #479681, #7e2bc1, #ffee00, #b60561, #1269b0);
+background-size: 1000% 1000%;
+
+-webkit-animation: Creative 16s ease infinite;
+-moz-animation: Creative 16s ease infinite;
+animation: Creative 16s ease infinite;
+}
+
+@-webkit-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+    
+    }
+
+
+
+.navbar {
+    
+    justify-content: center;
+}
+
+.card-deck {
+    
+    padding-top: 1%;
+    margin:auto;
+    height:600px;
+}
+
+#spotify-card, #youtube-card {
+    max-width:600px;
+    color:white;
+    
+
+}
+
+.mood-selector{
+
+    align-content: center;
+    vertical-align: 20%;
+
+}
+
+.main-footer {
+    background: linear-gradient(192deg, #479681, #7e2bc1, #ffee00, #b60561, #1269b0);
+background-size: 1000% 1000%;
+
+-webkit-animation: Creative 16s ease infinite;
+-moz-animation: Creative 16s ease infinite;
+animation: Creative 16s ease infinite;
+}
+
+@-webkit-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+    
+}
+
+
+.jumbotron {
+    align-items: center;
+    
+    background: linear-gradient(192deg, #479681, #7e2bc1, #ffee00, #b60561, #1269b0);
+background-size: 1000% 1000%;
+
+-webkit-animation: Creative 16s ease infinite;
+-moz-animation: Creative 16s ease infinite;
+animation: Creative 16s ease infinite;
+}
+
+@-webkit-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+
+
+.display-4 {
+    z-index: 6;
+}
+
+#title-container {
+    background-color: black;
+    max-width: 30%;
+    color:white;
+    margin:0 auto;
+    text-align: center;
+    
+    
+
+}
