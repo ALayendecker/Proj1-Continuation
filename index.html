@@ -1,70 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title> Mood Music - Randomly Generated Vibes for Your Mood</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <!--Day One From Google Fonts as Title Font-->
-  <link href="https://fonts.googleapis.com/css?family=Days+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-
-<body>
-  <nav class="navbar">
-    <form class="moodSelector">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Mood Select
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <button class="dropdown-item" type="button">Action</button>
-        <button class="dropdown-item" type="button">Another action</button>
-        <button class="dropdown-item" type="button">Something else here</button>
-    </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Mood Music - Randomly Generated Vibes for Your Mood</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--Day One From Google Fonts as Title Font-->
+    <link href="https://fonts.googleapis.com/css?family=Days+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+        <!--This is a modified jumbotron that occupies the entire horizontal space of its parent.-->
+        <div class="jumbotron jumbotron-fluid">
+          <div class="jumbo-container">
+              <div id ="title-container">
+            <h1 class="display-4">MOOD MUSIC</h1>
+            <p class="lead">Randomly Generated Vibes for Your Mood.</p>
+          </div>
+          </div>
+        </div>
+    <nav class="navbar">
+            <form class="mood-selector">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Mood Select
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <button class="dropdown-item" type="button" id="creative">Creative</button>
+                      <button class="dropdown-item" type="button" id="bummed">Bummed</button>
+                      <button class="dropdown-item" type="button" id="chill">Chill</button>
+                      <button class="dropdown-item" type="button" id="party">Party</button>
+                      <button class="dropdown-item" type="button" id="working">Working</button>
+                      <button class="dropdown-item" type="button" id="feeling-good">Feeling Good</button>
+                    </form>
+                  </div>
+    </nav>
+    <div class="main-body">
+    <div class="card-deck justify-content-center">
+      <div id="spotify-card">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Spotify</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div id="youtube-card">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+            <h5 class="card-title">YouTube</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in
+              to additional content. This content is a little bit longer.
+            </p>
+        </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
     </div>
-  </nav>
-  <div class="card-deck">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
     </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This card has supporting text below as a natural lead-in to
-          additional content.
-        </p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
     </div>
-  </div>
-  ​
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-</body>
+</div>
+    <div class="main-footer">
+            <large class="text-muted">Last updated 3 mins ago</large>
+        </div>
 
+​
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+  </body>
 </html>
