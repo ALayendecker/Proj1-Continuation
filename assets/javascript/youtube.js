@@ -1,69 +1,83 @@
-var moodMovie = [
-  "Creative",
-  "Bummed",
-  "Chill",
-  "Party",
-  "Working",
-  "Feeling Good"
-];
+// var moodMovie = [
+//   "Creative",
+//   "Bummed",
+//   "Chill",
+//   "Party",
+//   "Working",
+//   "Feeling Good"
+// ];
+// console.log("hello world");
+// // var api;
+// // $.getJSON("api.json", function(data) {
+// //   api = data.youtubeAPI;
+// // });
 
-var api;
-$.getJSON("api.json", function(data) {
-  api = data.youtubeAPI;
-});
+// function callVideo() {
+//   // $("iframe").empty();
+//   var movie = $(this).attr("data-name");
+//   var queryURL =
+//     // https://developers.google.com/youtube/v3/sample_requests + movie + api (key);
 
-function callVideo() {
-  $("iframe").empty();
-  var movie = $(this).attr("data-name");
-  var queryURL =
-    // https://developers.google.com/youtube/v3/sample_requests + movie + api (key);
+//     $.ajax({
+//       url: queryURL,
+//       method: "GET"
+//     }).then(function(response) {
+//       console.log(queryURL);
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-      console.log(queryURL);
+//       console.log(response);
 
-      console.log(response);
+//       for (var i = 0; i < moodMovie.length; i++) {
+//         a.attr("data-name", moodMovie[i]);
+//         // Providing the initial button text
+//         a.text(moodMovie[i]);
+//       }
 
-      var results = response.data;
+//             //this will be to add titles under videos with rework?
+//       //=========================================================
+//       //    var results = response.data;
+//       // Creating a div to hold the hero
+//       // for (var i = 0; i < results.length; i++) {
+//       //   // Creating and storing a div tag
 
-      for (var i = 0; i < results.length; i++) {
-        // Creating and storing a div tag
+//       //   var heroDiv = $("<div class='rating'>");
+//       //   // Creating a paragraph tag with the result item's rating
 
-        var movieDiv = $("<div class='rating'>");
-        // Creating a paragraph tag with the result item's rating
+//       //   var p = $("<p>").text("Rating: " + results[i].rating);
+//       //   heroDiv.prepend(p);
 
-        var p = $("<p>").text("Rating: " + results[i].rating);
-        movieDiv.prepend(p);
-        <iframe></iframe>;
-        $(movieDiv).prepend(
-          '<img class="gif" src="' +
-            response.data[i].images.fixed_height_still.url +
-            '">'
-        );
+//       //   $(heroDiv).prepend(
+//       //     '<img class="gif" src="' +
+//       //     response.data[i].images.fixed_height_still.url +
+//       //     '">'
+//       //   );
 
-        $("#movies-view").prepend(movieDiv);
-      }
-    });
-}
-// function to pull query url variables
-// _____________________________________________________________
-//
+//       //   $("#heroes-view").prepend(heroDiv);
+//       // }
+// // }
+// //=======================================
+
+// // function to pull query url variables
+// // _____________________________________________________________
+// //
 
 //iFrame API Reference
+// 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement("script");
 
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
 var player;
+// var dynamicVideoId = ajaxcall api for video/playlist id's;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("player", {
     height: "390",
     width: "640",
-    //------- videoId: "//video id's need to be inserted here", using variables pulled from ajax requests
+    //videoId: dynamicVideoId,
+    videoId: "jUzKDO3ue1I",
     events: {
       onReady: onPlayerReady,
       onStateChange: onPlayerStateChange
@@ -71,36 +85,22 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
+// 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   event.target.playVideo();
 }
 
-$("#add-hero").on("click", function(event) {
-  event.preventDefault();
-  // This line grabs the input from the textbox
-  var hero = $("#hero-input")
-    .val()
-    .trim();
-
-  // Adding hero from the textbox to our array
-  heroes.push(hero);
-
-  // Calling renderButtons which handles the processing of our hero array
-  renderButtons();
-  $("#hero-input").val("");
-});
-
-// Adding a click event listener to all elements with a class of "hero-btn"
-$(document).on("click", ".mood-btn", callVideo);
-//if needing to stop the video after a certain amount of time played
-
-// var done = false;
-// function onPlayerStateChange(event) {
-//   if (event.data == YT.PlayerState.PLAYING && !done) {
-//     setTimeout(stopVideo, 6000);
-//     done = true;
-//   }
-// }
-// function stopVideo() {
-//   player.stopVideo();
-// }
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    //if wanting to stop setTimeout
+    // setTimeout(stopVideo, 6000);
+    done = true;
+  }
+}
+function stopVideo() {
+  player.stopVideo();
+}
