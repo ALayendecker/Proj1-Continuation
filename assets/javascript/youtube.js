@@ -29,12 +29,13 @@ function callVideo() {
     var calledVideoId = response.items[0].id.videoId;
     console.log(calledVideoId);
 
-    $("#player").attr(
-      "src",
-      "https://www.youtube.com/embed/" +
+    $("#player").attr({
+      src:
+        "https://www.youtube.com/embed/" +
         calledVideoId +
-        "?enablejsapi=1&widgetid=1"
-    );
+        "?enablejsapi=1&widgetid=1",
+      style: "width: 640px; height: 390px;"
+    });
     console.log(
       "https://www.youtube.com/embed/" +
         calledVideoId +
@@ -42,6 +43,9 @@ function callVideo() {
     );
   });
 }
+$(document).ready(function() {
+  $(document).on("click", ".dropdown-item", callVideo);
+});
 // console.log(dynamicVideoId);
 // var tag = document.createElement("script");
 
@@ -90,10 +94,6 @@ function callVideo() {
 // function stopVideo() {
 //   player.stopVideo();
 // }
-
-$(document).ready(function() {
-  $(document).on("click", ".dropdown-item", callVideo);
-});
 
 // $(document).on("click", ".dropdown-item", loadVideoById);
 // var calledVideoId = JSON.stringify(response.items[0].id.videoId);
