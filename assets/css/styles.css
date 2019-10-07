@@ -42,6 +42,14 @@ animation: Happy 12s ease infinite;
     
 
 }
+/* .card-deck #youtube-card:hover ~ #spotify-card {
+opacity:.1;
+} 
+
+ .card-deck #spotify-card:hover ~ #youtube-card {
+opacity:.1;
+} */
+
 
 .mood-selector{
 
@@ -116,4 +124,64 @@ animation: Happy 12s ease infinite;
     
     
 
+}
+
+.display-4{
+    background: linear-gradient(231deg, #fffa00, #00ff7a, #ff36f7);
+background-size: 600% 600%;
+
+-webkit-animation: Happy 12s ease infinite;
+-moz-animation: Happy 12s ease infinite;
+animation: Happy 12s ease infinite;
+@-webkit-keyframes Happy {
+    0%{background-position:94% 0%}
+    50%{background-position:7% 100%}
+    100%{background-position:94% 0%}
+}
+}
+@-moz-keyframes Happy {
+    0%{background-position:94% 0%}
+    50%{background-position:7% 100%}
+    100%{background-position:94% 0%}
+}
+@keyframes Happy {
+    0%{background-position:94% 0%}
+    50%{background-position:7% 100%}
+    100%{background-position:94% 0%}
+}
+
+.jumbotron {
+    align-items: center;
+    
+    background: linear-gradient(231deg, #fffa00, #00ff7a, #ff36f7);
+    background-size: 600% 600%;
+    
+    -webkit-animation: Happy 12s ease infinite;
+    -moz-animation: Happy 12s ease infinite;
+    animation: Happy 12s ease infinite;
+    @-webkit-keyframes Happy {
+        0%{background-position:94% 0%}
+        50%{background-position:7% 100%}
+        100%{background-position:94% 0%}
+    
+    }
+    @-moz-keyframes Happy {
+        0%{background-position:94% 0%}
+        50%{background-position:7% 100%}
+        100%{background-position:94% 0%}
+    }
+    @keyframes Happy {
+        0%{background-position:94% 0%}
+        50%{background-position:7% 100%}
+        100%{background-position:94% 0%}
+
+
+    }
+
+}
+
+.card-footer{
+    background-color: black;
+    color:white;
+    size:auto;
 }
