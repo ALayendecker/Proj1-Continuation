@@ -1,106 +1,99 @@
-// var moodMovie = [
-//   "Creative",
-//   "Bummed",
-//   "Chill",
-//   "Party",
-//   "Working",
-//   "Feeling Good"
-// ];
-// console.log("hello world");
-// // var api;
-// // $.getJSON("api.json", function(data) {
-// //   api = data.youtubeAPI;
-// // });
+//possible need to put onClick="window.location.reload()"
+//for refreshing the page on a mood click to correctly load new songs and videos
 
-// function callVideo() {
-//   // $("iframe").empty();
-//   var movie = $(this).attr("data-name");
-//   var queryURL =
-//     // https://developers.google.com/youtube/v3/sample_requests + movie + api (key);
+var moodVideo = [
+  "Creative",
+  "Bummed",
+  "Chill",
+  "Party",
+  "Working",
+  "Feeling Good"
+];
+console.log("hello world");
 
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET"
-//     }).then(function(response) {
-//       console.log(queryURL);
+function callVideo() {
+  // $("iframe").empty();
+  var video = $(this).attr("data-name");
 
-//       console.log(response);
+  var queryURL =
+    "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId))&q=" +
+    video +
+    "?chart=mostPopular&key=AIzaSyBFSvZ6NlQxxUlGjSZ_agd4rSFDujrNx1E";
 
-//       for (var i = 0; i < moodMovie.length; i++) {
-//         a.attr("data-name", moodMovie[i]);
-//         // Providing the initial button text
-//         a.text(moodMovie[i]);
-//       }
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(queryURL);
+    console.log(response);
+    var calledVideoId = response.items[0].id.videoId;
+    console.log(calledVideoId);
 
-//             //this will be to add titles under videos with rework?
-//       //=========================================================
-//       //    var results = response.data;
-//       // Creating a div to hold the hero
-//       // for (var i = 0; i < results.length; i++) {
-//       //   // Creating and storing a div tag
-
-//       //   var heroDiv = $("<div class='rating'>");
-//       //   // Creating a paragraph tag with the result item's rating
-
-//       //   var p = $("<p>").text("Rating: " + results[i].rating);
-//       //   heroDiv.prepend(p);
-
-//       //   $(heroDiv).prepend(
-//       //     '<img class="gif" src="' +
-//       //     response.data[i].images.fixed_height_still.url +
-//       //     '">'
-//       //   );
-
-//       //   $("#heroes-view").prepend(heroDiv);
-//       // }
-// // }
-// //=======================================
-
-// // function to pull query url variables
-// // _____________________________________________________________
-// //
-
-//iFrame API Reference
-// 2. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement("script");
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
-// var dynamicVideoId = ajaxcall api for video/playlist id's;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("player", {
-    height: "390",
-    width: "640",
-    //videoId: dynamicVideoId,
-    videoId: "jUzKDO3ue1I",
-    events: {
-      onReady: onPlayerReady,
-      onStateChange: onPlayerStateChange
-    }
+    $("#player").attr(
+      "src",
+      "https://www.youtube.com/embed/" +
+        calledVideoId +
+        "?enablejsapi=1&widgetid=1"
+    );
+    console.log(
+      "https://www.youtube.com/embed/" +
+        calledVideoId +
+        "?enablejsapi=1&widgetid=1"
+    );
   });
 }
+// console.log(dynamicVideoId);
+// var tag = document.createElement("script");
 
-// 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName("script")[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    //if wanting to stop setTimeout
-    // setTimeout(stopVideo, 6000);
-    done = true;
-  }
-}
-function stopVideo() {
-  player.stopVideo();
-}
+// // 3. This function creates an <iframe> (and YouTube player)
+// //    after the API code downloads.
+// var player;
+
+// videoId = dynamicVideoId;
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player("player", {
+//     height: "390",
+//     width: "640",
+//     videoId: "qXUJSCZiU48",
+//     events: {
+//       onReady: onPlayerReady,
+//       onStateChange: onPlayerStateChange
+//     }
+//   });
+// }
+
+// // loadVideoById({
+// //   videoId: calledVideoId,
+// //   startSeconds: 5,
+// //   endSeconds: 60,
+// //   suggestedQuality: "large"
+// // });
+
+// // loadVideoById(calledVideoId, 5, "large");
+
+// function onPlayerReady(event) {
+//   event.target.playVideo();
+// }
+
+// var done = false;
+// function onPlayerStateChange(event) {
+//   if (event.data == YT.PlayerState.PLAYING && !done) {
+//     //if wanting to stop setTimeout
+//     // setTimeout(stopVideo, 6000);
+//     done = true;
+//   }
+// }
+// function stopVideo() {
+//   player.stopVideo();
+// }
+
+$(document).ready(function() {
+  $(document).on("click", ".dropdown-item", callVideo);
+});
+
+// $(document).on("click", ".dropdown-item", loadVideoById);
+// var calledVideoId = JSON.stringify(response.items[0].id.videoId);
