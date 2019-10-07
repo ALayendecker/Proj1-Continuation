@@ -18,7 +18,7 @@ function callVideo() {
   var queryURL =
     "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId))&q=" +
     video +
-    "&key=AIzaSyCMslwSlrH6sTgpkyNZJZ2lmaIRpX7Ijz8";
+    "&key=AIzaSyAc3djzygnkdu50CzxT7rmv8B2INfbLPp0";
 
   $.ajax({
     url: queryURL,
@@ -28,65 +28,71 @@ function callVideo() {
     console.log(response);
     var calledVideoId = response.items[0].id.videoId;
     console.log(calledVideoId);
-  });
-  $(".dropdown-item").click(function(noStringCalledVideoId) {
     $("#player").attr(
       "src",
       "https://www.youtube.com/embed/" +
-        String(noStringCalledVideoId) +
+        calledVideoId +
+        "?enablejsapi=1&widgetid=1"
+    );
+    console.log(
+      "https://www.youtube.com/embed/" +
+        calledVideoId +
         "?enablejsapi=1&widgetid=1"
     );
   });
 }
 // console.log(dynamicVideoId);
-var tag = document.createElement("script");
+// var tag = document.createElement("script");
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName("script")[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
+// // 3. This function creates an <iframe> (and YouTube player)
+// //    after the API code downloads.
+// var player;
 
-// videoId = dynamicVideoId;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("player", {
-    height: "390",
-    width: "640",
-    videoId: "qXUJSCZiU48",
-    events: {
-      onReady: onPlayerReady,
-      onStateChange: onPlayerStateChange
-    }
-  });
-}
+// // videoId = dynamicVideoId;
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player("player", {
+//     height: "390",
+//     width: "640",
+//     videoId: "qXUJSCZiU48",
+//     events: {
+//       onReady: onPlayerReady,
+//       onStateChange: onPlayerStateChange
+//     }
+//   });
+// }
 
-// loadVideoById({
-//   videoId: calledVideoId,
-//   startSeconds: 5,
-//   endSeconds: 60,
-//   suggestedQuality: "large"
-// });
+// // loadVideoById({
+// //   videoId: calledVideoId,
+// //   startSeconds: 5,
+// //   endSeconds: 60,
+// //   suggestedQuality: "large"
+// // });
 
-// loadVideoById(calledVideoId, 5, "large");
+// // loadVideoById(calledVideoId, 5, "large");
 
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
+// function onPlayerReady(event) {
+//   event.target.playVideo();
+// }
 
-var done = false;
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    //if wanting to stop setTimeout
-    // setTimeout(stopVideo, 6000);
-    done = true;
-  }
-}
-function stopVideo() {
-  player.stopVideo();
-}
+// var done = false;
+// function onPlayerStateChange(event) {
+//   if (event.data == YT.PlayerState.PLAYING && !done) {
+//     //if wanting to stop setTimeout
+//     // setTimeout(stopVideo, 6000);
+//     done = true;
+//   }
+// }
+// function stopVideo() {
+//   player.stopVideo();
+// }
 
-$(document).on("click", ".dropdown-item", callVideo);
+$(document).ready(function() {
+  $(document).on("click", ".dropdown-item", callVideo);
+});
+
 // $(document).on("click", ".dropdown-item", loadVideoById);
 // var calledVideoId = JSON.stringify(response.items[0].id.videoId);
