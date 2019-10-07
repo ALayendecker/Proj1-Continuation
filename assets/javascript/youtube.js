@@ -18,7 +18,7 @@ function callVideo() {
   var queryURL =
     "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId))&q=" +
     video +
-    "&key=AIzaSyAc3djzygnkdu50CzxT7rmv8B2INfbLPp0";
+    "?chart=mostPopular&key=AIzaSyBFSvZ6NlQxxUlGjSZ_agd4rSFDujrNx1E";
 
   $.ajax({
     url: queryURL,
@@ -28,6 +28,7 @@ function callVideo() {
     console.log(response);
     var calledVideoId = response.items[0].id.videoId;
     console.log(calledVideoId);
+
     $("#player").attr(
       "src",
       "https://www.youtube.com/embed/" +
@@ -52,7 +53,7 @@ function callVideo() {
 // //    after the API code downloads.
 // var player;
 
-// // videoId = dynamicVideoId;
+// videoId = dynamicVideoId;
 // function onYouTubeIframeAPIReady() {
 //   player = new YT.Player("player", {
 //     height: "390",
