@@ -18,8 +18,11 @@
     />
 
     <link class="style-sheets" rel="stylesheet" href="assets/css/styles.css" />
-    <!-- firebase -->
+    <!-- firebase
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   </head>
 
   <body>
@@ -53,14 +56,14 @@
             class="dropdown-item"
             type="button"
             id="creative"
-            data-name="inspiring+music"
+            data-name="motivating+music+2019"
           >
             Creative
           </button>
           <button
             class="dropdown-item"
             type="button"
-            data-name="sad+music"
+            data-name="sad+music+2019"
             id="bummed"
           >
             Bummed
@@ -76,7 +79,7 @@
           <button
             class="dropdown-item"
             type="button"
-            data-name="party+music"
+            data-name="party+music+2019"
             id="party"
           >
             Party
@@ -84,7 +87,7 @@
           <button
             class="dropdown-item"
             type="button"
-            data-name="study+music"
+            data-name="WORK Jazz + Concentration +2019"
             id="working"
           >
             Working
@@ -92,7 +95,7 @@
           <button
             class="dropdown-item"
             type="button"
-            data-name="happy+music"
+            data-name="happy+music+2019"
             id="feeling-good"
           >
             Feeling Good
@@ -100,7 +103,7 @@
           <button
             class="dropdown-item"
             type="button"
-            data-name="romantic+music"
+            data-name="romantic+music+2019"
             id="romantic"
           >
             Romantical
@@ -108,7 +111,7 @@
           <button
             class="dropdown-item"
             type="button"
-            data-name="lonely+music"
+            data-name="lonely+music+2019"
             id="lonely"
           >
             Lonely
@@ -120,36 +123,36 @@
       <div class="card-deck justify-content-center">
         <div id="spotify-card">
           <div class="card-body">
-            <iframe></iframe>
-            <h5 class="card-title">Spotify</h5>
+            <!-- clonies quote is around here -->
+            <div id="quote"></div>
+
             <p class="card-text">
               This is a wider card with supporting text below as a natural
               lead-in to additional content. This content is a little bit
               longer.
             </p>
           </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
         </div>
         <div id="youtube-card">
           <div class="card-body">
             <div>
               <iframe id="player" class="youtube"></iframe>
-              <h5 class="card-title">YouTube</h5>
+
               <p class="card-text"></p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
         </div>
       </div>
     </div>
-    ​
-    <div class="main-footer">
-      <large class="text-muted">Last updated 3 mins ago</large>
-    </div>
+    ​<container style="text-align: center;">
+      <div id="chart-div" stlye="width: 150px; height: 150px;">
+        <canvas id="myChart"></canvas>
+      </div>
+      ​
+    </container>
+    <!-- <div class="main-footer">
+      <large class="test-class">Last updated 3 mins ago</large>
+    </div> -->
     ​ ​
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
@@ -168,6 +171,8 @@
     ></script>
     <script src="assets/javascript/youtube.js"></script>
     <script src="assets/javascript/stylechanger.js"></script>
+    <script src="assets/javascript/bubbleChartD3.js"></script>
+    <script src="assets/javascript/quote.js"
   </body>
 </html>
 <!-- this is working html for a youtube player -->

@@ -1,243 +1,128 @@
-//firebase config
-var firebaseConfig = {
-  apiKey: "AIzaSyC4Rc8sreGaXTBDOt7SZ0MqqUab3uW8D0s",
-  authDomain: "peppy-sensor-255201.firebaseapp.com",
-  databaseURL: "https://peppy-sensor-255201.firebaseio.com",
-  projectId: "peppy-sensor-255201",
-  storageBucket: "",
-  messagingSenderId: "924132566669",
-  appId: "1:924132566669:web:35902be7f88eb27c3aa4c4"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-//----------------------------
-//clicker activity code
-//----------------------------
-var database = firebase.database();
+// $(document).ready(function() {
+// var clickCount = localStorage.getItem("clickCount");
+var creativeCounter = localStorage.getItem("creativeCount");
+var bummedCounter = localStorage.getItem("bummedCount");
+var chillCounter = localStorage.getItem("chillCount");
+var partyCounter = localStorage.getItem("partyCount");
+var workingCounter = localStorage.getItem("workingCount");
+var feelingGoodCounter = localStorage.getItem("feelingGoodCount");
+var romanticalCounter = localStorage.getItem("romanticalCount");
+var lonelyCounter = localStorage.getItem("lonelyCount");
 
-// Setting initial value of our click counter variable to 0
-var clickCounter = 0;
+// creativeCounter = creativeCounter ? parseInt(creativeCounter) : 0;
+// bummedCounter = bummedCounter ? parseInt(bummedCounter) : 0;
+// chillCounter = chillCounter ? parseInt(chillCounter) : 0;
+// partyCounter = partyCounter ? parseInt(partyCounter) : 0;
+// workingCounter = workingCounter ? parseInt(workingCounter) : 0;
+// feelingGoodCounter = feelingGoodCounter ? parseInt(feelingGoodCounter) : 0;
+// romanticalCounter = romanticalCounter ? parseInt(romanticalCounter) : 0;
+// lonelyCounter = lonelyCounter ? parseInt(lonelyCounter) : 0;
 
-// FUNCTIONS + EVENTS
-// --------------------------------------------------------------------------------
-
-// On Click of Button
-$("#creative").on("click", function() {
-  // Add to clickCounter
-  clickCounter++;
-
-  //  Store Click Data to Firebase in a JSON property called clickCount
-  // Note how we are using the Firebase .set() method
-  database.ref().set({
-    clickCount: clickCounter
-  });
+// $(".dropdown-item").click(function() {
+$("#creative").click(function() {
+  ++creativeCounter;
 });
-$("#bummed").on("click", function() {
-  // Add to clickCounter
-  clickCounter++;
-
-  //  Store Click Data to Firebase in a JSON property called clickCount
-  // Note how we are using the Firebase .set() method
-  database.ref().set({
-    clickCount: clickCounter
-  });
+console.log("creative" + creativeCounter);
+$("#bummed").click(function() {
+  ++bummedCounter;
 });
-$("#chill").on("click", function() {
-  // Add to clickCounter
-  clickCounter++;
-
-  //  Store Click Data to Firebase in a JSON property called clickCount
-  // Note how we are using the Firebase .set() method
-  database.ref().set({
-    clickCount: clickCounter
-  });
+console.log("bummed" + bummedCounter);
+$("#chill").click(function() {
+  ++chillCounter;
 });
-$("#party").on("click", function() {
-  // Add to clickCounter
-  clickCounter++;
-
-  //  Store Click Data to Firebase in a JSON property called clickCount
-  // Note how we are using the Firebase .set() method
-  database.ref().set({
-    clickCount: clickCounter
-  });
+console.log("chill" + chillCounter);
+$("#party").click(function() {
+  ++partyCounter;
 });
-$("#working").on("click", function() {
-  // Add to clickCounter
-  clickCounter++;
-
-  //  Store Click Data to Firebase in a JSON property called clickCount
-  // Note how we are using the Firebase .set() method
-  database.ref().set({
-    clickCount: clickCounter
-  });
+console.log("part" + partyCounter);
+$("#working").click(function() {
+  ++workingCounter;
 });
-$("#feeling-good").on("click", function() {
-  // Add to clickCounter
-  clickCounter++;
-
-  //  Store Click Data to Firebase in a JSON property called clickCount
-  // Note how we are using the Firebase .set() method
-  database.ref().set({
-    clickCount: clickCounter
-  });
+console.log("working" + workingCounter);
+$("#feeling-good").click(function() {
+  ++feelingGoodCounter;
 });
-$("#romantic").on("click", function() {
-  // Add to clickCounter
-  clickCounter++;
-
-  //  Store Click Data to Firebase in a JSON property called clickCount
-  // Note how we are using the Firebase .set() method
-  database.ref().set({
-    clickCount: clickCounter
-  });
+console.log("feeling" + feelingGoodCounter);
+$("#romantic").click(function() {
+  ++romanticalCounter;
 });
-$("#lonely").on("click", function() {
-  // Add to clickCounter
-  clickCounter++;
-
-  //  Store Click Data to Firebase in a JSON property called clickCount
-  // Note how we are using the Firebase .set() method
-  database.ref().set({
-    clickCount: clickCounter
-  });
+console.log("rom" + romanticalCounter);
+$("#lonely").click(function() {
+  ++lonelyCounter;
 });
+console.log("lonely" + lonelyCounter);
 
-// MAIN PROCESS + INITIAL CODE
-// --------------------------------------------------------------------------------
+// $(".dropdown-item").on("click", counter);
+// $("#creative").on("click", counter);
+// $("#bummed").on("click", counter);
+// $("#chill").on("click", counter);
+// $("#party").on("click", counter);
+// $("#working").on("click", counter);
+// $("#feeling-good").on("click", counter);
+// $("#romantic").on("click", counter);
+// $("#lonely").on("click", counter);
 
-// Using .on("value", function(snapshot)) syntax will retrieve the data
-// from the database (both initially and every time something changes)
-// This will then store the data inside the variable "snapshot". We could rename "snapshot" to anything.
-database.ref().on(
-  "value",
-  function(snapshot) {
-    // Then we console.log the value of snapshot
-    console.log(snapshot.val());
+localStorage.setItem("creativeCount", creativeCounter);
+localStorage.setItem("bummedCount", bummedCounter);
+localStorage.setItem("chillCount", chillCounter);
+localStorage.setItem("partyCount", partyCounter);
+localStorage.setItem("workingCount", workingCounter);
+localStorage.setItem("feelingGoodCount", feelingGoodCounter);
+localStorage.setItem("romanticalCount", romanticalCounter);
+localStorage.setItem("lonelyCount", lonelyCounter);
+// });
+// });
 
-    // Update the clickCounter variable with data from the database.
-    clickCounter = snapshot.val().clickCount;
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: "doughnut",
+  data: {
+    labels: [
+      "Creative",
+      "Bummed",
+      "Chill",
+      "Party",
+      "Working",
+      "Feeling Good",
+      "Romantic",
+      "Lonely"
+    ],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [
+          creativeCounter,
+          bummedCounter,
+          chillCounter,
+          partyCounter,
+          workingCounter,
+          feelingGoodCounter,
+          romanticalCounter,
+          lonelyCounter
+        ],
+        // data: [1, 2, 3, 4, 5, 6, 7, 8],
 
-    // Then we change the html associated with the number.
-    $("#click-value").text(snapshot.val().clickCount);
-
-    // If there is an error that Firebase runs into -- it will be stored in the "errorObject"
-    // Again we could have named errorObject anything we wanted.
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(255, 206, 86, 0.2)",
+          "rgba(75, 192, 192, 0.2)",
+          "rgba(153, 102, 255, 0.2)",
+          "rgba(255, 159, 64, 0.2)",
+          "rgba(153, 102, 255, 0.2)",
+          "rgba(255, 159, 64, 0.2)"
+        ]
+        // borderColor: [
+        //   "rgba(255, 99, 132, 1)",
+        //   "rgba(54, 162, 235, 1)",
+        //   "rgba(255, 206, 86, 1)",
+        //   "rgba(75, 192, 192, 1)",
+        //   "rgba(153, 102, 255, 1)",
+        //   "rgba(255, 159, 64, 1)"
+        // ],
+        // borderWidth: 1
+      }
+    ]
   },
-  function(errorObject) {
-    // In case of error this will print the error
-    console.log("The read failed: " + errorObject.code);
-  }
-);
-
-//----------------------------
-//D3 Code
-//----------------------------
-var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-var bubble = d3
-  .pack(dataset)
-  .size([diameter, diameter])
-  .padding(1.5);
-
-var node = svg
-  .selectAll(".node")
-  .data(bubble(nodes).descendants())
-  .enter()
-  .filter(function(d) {
-    return !d.children;
-  })
-  .append("g")
-  .attr("class", "node")
-  .attr("transform", function(d) {
-    return "translate(" + d.x + "," + d.y + ")";
-  });
-
-dataset = {
-  children: [
-    { Name: "Creative", Count: 0 },
-    { Name: "Bummed", Count: 0 },
-    { Name: "Chill", Count: 0 },
-    { Name: "Party", Count: 0 },
-    { Name: "Working", Count: 0 },
-    { Name: "Feeling Good", Count: 0 },
-    { Name: "Rommantical", Count: 0 },
-    { Name: "Lonely", Count: 0 }
-  ]
-};
-
-var diameter = 600;
-var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-var bubble = d3
-  .pack(dataset)
-  .size([diameter, diameter])
-  .padding(1.5);
-
-var svg = d3
-  .select("body")
-  .append("svg")
-  .attr("width", diameter)
-  .attr("height", diameter)
-  .attr("class", "bubble");
-
-var nodes = d3.hierarchy(dataset).sum(function(d) {
-  return d.Count;
+  options: {}
 });
-
-var node = svg
-  .selectAll(".node")
-  .data(bubble(nodes).descendants())
-  .enter()
-  .filter(function(d) {
-    return !d.children;
-  })
-  .append("g")
-  .attr("class", "node")
-  .attr("transform", function(d) {
-    return "translate(" + d.x + "," + d.y + ")";
-  });
-
-node.append("title").text(function(d) {
-  return d.Name + ": " + d.Count;
-});
-
-node
-  .append("circle")
-  .attr("r", function(d) {
-    return d.r;
-  })
-  .style("fill", function(d, i) {
-    return color(i);
-  });
-
-node
-  .append("text")
-  .attr("dy", ".2em")
-  .style("text-anchor", "middle")
-  .text(function(d) {
-    return d.data.Name.substring(0, d.r / 3);
-  })
-  .attr("font-family", "Days One", "sans-serif")
-  .attr("font-size", function(d) {
-    return d.r / 5;
-  })
-  .attr("fill", "white");
-
-node
-  .append("text")
-  .attr("dy", "1.3em")
-  .style("text-anchor", "middle")
-  .text(function(d) {
-    return d.data.Count;
-  })
-  .attr("font-family", "Days One", "sans-serif")
-  .attr("font-size", function(d) {
-    return d.r / 5;
-  })
-  .attr("fill", "white");
-
-d3.select(self.frameElement).style("height", diameter + "px");
-
-//modified from Alok K. Shukla bubble chart
-//found https://bl.ocks.org/alokkshukla/3d6be4be0ef9f6977ec6718b2916d168
