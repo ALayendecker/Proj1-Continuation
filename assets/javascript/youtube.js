@@ -16,9 +16,12 @@ function callVideo() {
   var video = $(this).attr("data-name");
 
   var queryURL =
+    // "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId))&q=" +
+    // video +
+    // "?chart=mostPopular&key=AIzaSyCMslwSlrH6sTgpkyNZJZ2lmaIRpX7Ijz8";
     "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId))&q=" +
     video +
-    "?chart=mostPopular&key=AIzaSyBFSvZ6NlQxxUlGjSZ_agd4rSFDujrNx1E";
+    "&key=AIzaSyCMslwSlrH6sTgpkyNZJZ2lmaIRpX7Ijz8";
 
   $.ajax({
     url: queryURL,
@@ -34,7 +37,7 @@ function callVideo() {
         "https://www.youtube.com/embed/" +
         calledVideoId +
         "?enablejsapi=1&widgetid=1",
-      style: "width: 640px; height: 390px;"
+      style: "width: 600px; height: 350px;"
     });
     console.log(
       "https://www.youtube.com/embed/" +
