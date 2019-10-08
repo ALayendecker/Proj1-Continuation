@@ -1,117 +1,172 @@
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 .main-body {
- 
-background: linear-gradient(212deg, #0d0730, #3d1476, #d28f41);
-background-size: 600% 600%;
+  background: linear-gradient(212deg, #0d0730, #3d1476, #d28f41);
+  background-size: 600% 600%;
 
--webkit-animation: Sleepy 10s ease infinite;
--moz-animation: Sleepy 10s ease infinite;
-animation: Sleepy 10s ease infinite;
+  -webkit-animation: Sleepy 10s ease infinite;
+  -moz-animation: Sleepy 10s ease infinite;
+  animation: Sleepy 10s ease infinite;
 }
 @-webkit-keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
 @-moz-keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
 @keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
 
 .display-4 {
-    z-index: 6;
+  z-index: 6;
 }
 
 #title-container {
-    background-color: black;
-    max-width: 30%;
-    color:white;
-    margin:0 auto;
-    text-align: center;
+  background-color: black;
+  max-width: 30%;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#moodDropdown {
+  left: auto;
+  color: white;
+  background-color: black;
+}
+.dropdown-item {
+  color: white;
 }
 
 .navbar {
-    
-    justify-content: center;
+  justify-content: center;
 }
 
 .card-deck {
-    
-    padding-top: 1%;
-    margin:auto;
-    height:600px;
+  padding-top: 1%;
+  margin: auto;
+  height: 600px;
 }
 
-#spotify-card, #youtube-card {
-    max-width:600px;
-    color:white;
-    
-
+#spotify-card,
+#youtube-card {
+  max-width: 600px;
+  color: white;
 }
 
-.mood-selector{
-
-    align-content: center;
-    vertical-align: 20%;
-
+.mood-selector {
+  align-content: center;
+  vertical-align: 20%;
 }
 
 .main-footer {
+  background: linear-gradient(212deg, #0d0730, #3d1476, #d28f41);
+  background-size: 600% 600%;
 
-    background: linear-gradient(212deg, #0d0730, #3d1476, #d28f41);
-background-size: 600% 600%;
-
--webkit-animation: Sleepy 10s ease infinite;
--moz-animation: Sleepy 10s ease infinite;
-animation: Sleepy 10s ease infinite;
+  -webkit-animation: Sleepy 10s ease infinite;
+  -moz-animation: Sleepy 10s ease infinite;
+  animation: Sleepy 10s ease infinite;
 }
 @-webkit-keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
 @-moz-keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
 @keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
-    
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
 
 .jumbotron {
-    align-items: center;
-    
-    background: linear-gradient(212deg, #0d0730, #3d1476, #d28f41);
-background-size: 600% 600%;
+  align-items: center;
 
--webkit-animation: Sleepy 10s ease infinite;
--moz-animation: Sleepy 10s ease infinite;
-animation: Sleepy 10s ease infinite;
+  background: linear-gradient(212deg, #0d0730, #3d1476, #d28f41);
+  background-size: 600% 600%;
+
+  -webkit-animation: Sleepy 10s ease infinite;
+  -moz-animation: Sleepy 10s ease infinite;
+  animation: Sleepy 10s ease infinite;
 }
 @-webkit-keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
 @-moz-keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
 @keyframes Sleepy {
-    0%{background-position:74% 0%}
-    50%{background-position:27% 100%}
-    100%{background-position:74% 0%}
+  0% {
+    background-position: 74% 0%;
+  }
+  50% {
+    background-position: 27% 100%;
+  }
+  100% {
+    background-position: 74% 0%;
+  }
 }
