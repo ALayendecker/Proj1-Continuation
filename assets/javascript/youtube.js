@@ -21,7 +21,7 @@ function callVideo() {
     // "?chart=mostPopular&key=AIzaSyCMslwSlrH6sTgpkyNZJZ2lmaIRpX7Ijz8";
     "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId))&q=" +
     video +
-    "&key=AIzaSyCMslwSlrH6sTgpkyNZJZ2lmaIRpX7Ijz8";
+    "&key=AIzaSyAPBxVPucdz2gMdvX7MXKgvmnCO3CUWtvw";
 
   $.ajax({
     url: queryURL,
