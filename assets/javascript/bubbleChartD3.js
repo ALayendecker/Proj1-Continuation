@@ -1,14 +1,3 @@
-// $(document).ready(function() {
-// var clickCount = localStorage.getItem("clickCount");
-// var creativeCounter = localStorage.getItem("creativeCount");
-// var bummedCounter = localStorage.getItem("bummedCount");
-// var chillCounter = localStorage.getItem("chillCount");
-// var partyCounter = localStorage.getItem("partyCount");
-// var workingCounter = localStorage.getItem("workingCount");
-// var feelingGoodCounter = localStorage.getItem("feelingGoodCount");
-// var romanticalCounter = localStorage.getItem("romanticalCount");
-// var lonelyCounter = localStorage.getItem("lonelyCount");
-
 var creativeCounter = creativeCounter ? parseInt(creativeCounter) : 0;
 var bummedCounter = bummedCounter ? parseInt(bummedCounter) : 0;
 var chillCounter = chillCounter ? parseInt(chillCounter) : 0;
@@ -18,7 +7,6 @@ var feelingGoodCounter = feelingGoodCounter ? parseInt(feelingGoodCounter) : 0;
 var romanticalCounter = romanticalCounter ? parseInt(romanticalCounter) : 0;
 var lonelyCounter = lonelyCounter ? parseInt(lonelyCounter) : 0;
 
-// $(".dropdown-item").click(function() {
 $("#creative").click(function() {
   creativeCounter++;
   renderChart();
@@ -58,24 +46,6 @@ $("#lonely").click(function() {
   lonelyCounter++;
   renderChart();
 });
-
-// function reload() {
-//   var container = document.getElementById("chart-div");
-//   var content = container.innerHTML;
-//   container.innerHTML = content;
-
-//   //this line is to watch the result in console , you can remove it later
-//   console.log("Refreshed");
-// }
-// $(".dropdown-item").on("click", counter);
-// $("#creative").on("click", counter);
-// $("#bummed").on("click", counter);
-// $("#chill").on("click", counter);
-// $("#party").on("click", counter);
-// $("#working").on("click", counter);
-// $("#feeling-good").on("click", counter);
-// $("#romantic").on("click", counter);
-// $("#lonely").on("click", counter);
 
 localStorage.setItem("creativeCount", creativeCounter);
 localStorage.setItem("bummedCount", bummedCounter);

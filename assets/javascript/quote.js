@@ -37,7 +37,7 @@ $(".dropdown-item").on("click", function() {
     method: "GET",
     headers: {
       "x-rapidapi-host": "goodreads-best-quotes.p.rapidapi.com",
-      "x-rapidapi-key": "b530af42f2mshe5e195db966c7cfp1b3a00jsncc9c887382eb"
+      "x-rapidapi-key": "b530af42f2mshe5e195db1b3a00jsncc9c887382eb"
     }
   };
 
