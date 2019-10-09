@@ -120,17 +120,21 @@
       </form>
     </nav>
     <div class="main-body">
-      <div class="card-deck justify-content-center">
+      <div class="card-deck justify-content-center" style="min-height: 600px;">
         <div id="spotify-card">
           <div class="card-body">
             <!-- clonies quote is around here -->
-            <div id="quote"></div>
+            <div id="quote" style="font-size: 1.4em;"></div>
           </div>
         </div>
         <div id="youtube-card">
           <div class="card-body">
             <div>
-              <iframe id="player" class="youtube"></iframe>
+              <iframe
+                id="player"
+                class="youtube"
+                style="border-width: 0px;"
+              ></iframe>
 
               <p class="card-text"></p>
             </div>
