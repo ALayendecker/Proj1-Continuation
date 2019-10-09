@@ -55,7 +55,10 @@ body {
 #moodDropdown {
   left: auto;
   color: white;
-  background-color: black;
+  background-image: url(../images/tim-mossholder.jpg);
+  border: 2px;
+  border-color: #fff;
+  border-style: solid;
 }
 .dropdown-item {
   color: white;
@@ -190,7 +193,7 @@ body {
 }
 
 #title-container {
-  background-color: black;
+  background-image: url("../images/tim-mossholder.jpg");
   max-width: 30%;
   color: white;
   margin: 0 auto;
