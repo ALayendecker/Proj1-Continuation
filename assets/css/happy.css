@@ -1,0 +1,234 @@
+.main-footer {
+    background: linear-gradient(231deg, #fffa00, #00ff7a, #ff36f7);
+    background-size: 600% 600%;
+
+    -webkit-animation: Happy 12s ease infinite;
+    -moz-animation: Happy 12s ease infinite;
+    animation: Happy 12s ease infinite;
+
+    @-webkit-keyframes Happy {
+        0% {
+            background-position: 94% 0%
+        }
+
+        50% {
+            background-position: 7% 100%
+        }
+
+        100% {
+            background-position: 94% 0%
+        }
+    }
+}
+
+@-moz-keyframes Happy {
+    0% {
+        background-position: 94% 0%
+    }
+
+    50% {
+        background-position: 7% 100%
+    }
+
+    100% {
+        background-position: 94% 0%
+    }
+}
+
+@keyframes Happy {
+    0% {
+        background-position: 94% 0%
+    }
+
+    50% {
+        background-position: 7% 100%
+    }
+
+    100% {
+        background-position: 94% 0%
+    }
+}
+
+.jumbotron {
+    align-items: center;
+
+    background: linear-gradient(231deg, #fffa00, #00ff7a, #ff36f7);
+    background-size: 600% 600%;
+    border: 3px;
+    border-color: #fff;
+    border-style: solid;
+
+    -webkit-animation: Happy 12s ease infinite;
+    -moz-animation: Happy 12s ease infinite;
+    animation: Happy 12s ease infinite;
+
+    @-webkit-keyframes Happy {
+        0% {
+            background-position: 94% 0%
+        }
+
+        50% {
+            background-position: 7% 100%
+        }
+
+        100% {
+            background-position: 94% 0%
+        }
+
+    }
+
+    @-moz-keyframes Happy {
+        0% {
+            background-position: 94% 0%
+        }
+
+        50% {
+            background-position: 7% 100%
+        }
+
+        100% {
+            background-position: 94% 0%
+        }
+    }
+
+    @keyframes Happy {
+        0% {
+            background-position: 94% 0%
+        }
+
+        50% {
+            background-position: 7% 100%
+        }
+
+        100% {
+            background-position: 94% 0%
+        }
+
+
+    }
+}
+
+body {
+    background-color: black;
+}
+
+.main-body {
+    background: linear-gradient(231deg, #fffa00, #00ff7a, #ff36f7);
+    background-size: 600% 600%;
+
+    -webkit-animation: Happy 12s ease infinite;
+    -moz-animation: Happy 12s ease infinite;
+    animation: Happy 12s ease infinite;
+
+    @-webkit-keyframes Happy {
+        0% {
+            background-position: 94% 0%
+        }
+
+        50% {
+            background-position: 7% 100%
+        }
+
+        100% {
+            background-position: 94% 0%
+        }
+    }
+}
+
+@-moz-keyframes Happy {
+    0% {
+        background-position: 94% 0%
+    }
+
+    50% {
+        background-position: 7% 100%
+    }
+
+    100% {
+        background-position: 94% 0%
+    }
+}
+
+@keyframes Happy {
+    0% {
+        background-position: 94% 0%
+    }
+
+    50% {
+        background-position: 7% 100%
+    }
+
+    100% {
+        background-position: 94% 0%
+    }
+}
+
+
+.navbar {
+
+    justify-content: center;
+}
+
+.card-deck {
+
+    padding-top: 1%;
+    margin: auto;
+    height: auto;
+    border: 3px;
+    border-color: #fff;
+    border-style: solid;
+
+}
+
+#spotify-card,
+#youtube-card {
+    max-width: 600px;
+    color: white;
+
+
+}
+
+.mood-selector {
+
+    align-content: center;
+    vertical-align: 20%;
+    color: white;
+}
+
+
+.display-4 {
+    z-index: 6;
+    border: 3px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+
+
+#title-container {
+    background-image: url("../images/tim-mossholder.jpg");
+    max-width: 30%;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+
+
+
+}
+
+#moodDropdown {
+    left: auto;
+    color: white;
+    background-image: url(../images/tim-mossholder.jpg);
+    border: 2px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.btn {
+    color: white;
+}

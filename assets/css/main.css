@@ -1,0 +1,229 @@
+.main-footer {
+  background: linear-gradient(312deg, #000000, #505050, #ffffff, #272a52, #000000, #ffffff, #000000);
+  background-size: 1400% 1400%;
+
+  -webkit-animation: Styles 18s ease infinite;
+  -moz-animation: Styles 18s ease infinite;
+  animation: Styles 18s ease infinite;
+}
+
+@-webkit-keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+@-moz-keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+@keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+
+.jumbotron {
+  align-items: center;
+  background: linear-gradient(312deg, #000000, #505050, #ffffff, #272a52, #000000, #ffffff, #000000);
+  background-size: 1400% 1400%;
+
+  -webkit-animation: Styles 18s ease infinite;
+  -moz-animation: Styles 18s ease infinite;
+  animation: Styles 18s ease infinite;
+}
+
+@-webkit-keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+@-moz-keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+@keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+
+body {
+  background-color: black;
+}
+
+.main-body {
+  background: linear-gradient(312deg, #000000, #505050, #ffffff, #272a52, #000000, #ffffff, #000000);
+  background-size: 1400% 1400%;
+
+  -webkit-animation: Styles 18s ease infinite;
+  -moz-animation: Styles 18s ease infinite;
+  animation: Styles 18s ease infinite;
+}
+
+@-webkit-keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+@-moz-keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+@keyframes Styles {
+  0% {
+    background-position: 0% 42%
+  }
+
+  50% {
+    background-position: 100% 59%
+  }
+
+  100% {
+    background-position: 0% 42%
+  }
+}
+
+
+.navbar {
+
+  justify-content: center;
+}
+
+.card-deck {
+
+  padding-top: 1%;
+  margin: auto;
+  height: auto;
+  border: 3px;
+  border-color: #fff;
+  border-style: solid;
+
+}
+
+#spotify-card,
+#youtube-card {
+  max-width: 600px;
+  color: white;
+
+
+}
+
+.mood-selector {
+
+  align-content: center;
+  vertical-align: 20%;
+  color: white;
+}
+
+
+.display-4 {
+  z-index: 6;
+  border: 3px;
+  border-color: #fff;
+  border-style: solid;
+}
+
+
+
+#title-container {
+  background-image: url("../images/tim-mossholder.jpg");
+  max-width: 30%;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+
+
+
+}
+
+#moodDropdown {
+  left: auto;
+  color: white;
+  background-image: url(../images/tim-mossholder.jpg);
+  border: 2px;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.btn {
+  color: white;
+}

@@ -2,6 +2,7 @@ body {
     background-color: black;
 }
 
+/* Anything until next comment contains gradient animation */
 .main-body {
     background: linear-gradient(210deg, #000000, #ff0000, #000000, #ff5c00, #000000, #ffe300, #d70f0f);
     background-size: 1400% 1400%;
@@ -51,40 +52,6 @@ body {
     100% {
         background-position: 0% 94%
     }
-}
-
-
-
-.navbar {
-
-    justify-content: center;
-}
-
-.card-deck {
-
-    padding-top: 1%;
-    margin: auto;
-    height: auto;
-    border: 3px;
-    border-color: #fff;
-    border-style: solid;
-}
-
-#spotify-card,
-#youtube-card {
-    max-width: 600px;
-    color: white;
-
-
-
-}
-
-.mood-selector {
-
-    align-content: center;
-    vertical-align: 20%;
-    color: white;
-
 }
 
 .main-footer {
@@ -194,6 +161,42 @@ body {
         background-position: 0% 94%
     }
 }
+
+/* Ends Gradient Animation ----------------------------------------------------------------------- */
+
+.navbar {
+
+    justify-content: center;
+}
+
+.card-deck {
+
+    padding-top: 1%;
+    margin: auto;
+    height: auto;
+    border: 3px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+#spotify-card,
+#youtube-card {
+    max-width: 600px;
+    color: white;
+
+
+
+}
+
+.mood-selector {
+
+    align-content: center;
+    vertical-align: 20%;
+    color: white;
+
+}
+
+
 
 
 .display-4 {

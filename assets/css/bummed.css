@@ -1,0 +1,159 @@
+body {
+    background-color: black;
+}
+
+/* Anything until next comment contains gradient animation */
+.main-body {
+    background: linear-gradient(270deg, #0c033e, #0d3609, #000000, #3e0202, #02004e, #000000);
+    background-size: 1200% 1200%;
+    
+    -webkit-animation: Bummed 25s ease infinite;
+    -moz-animation: Bummed 25s ease infinite;
+    animation: Bummed 25s ease infinite;
+}
+    
+    @-webkit-keyframes Bummed {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes Bummed {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes Bummed {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+
+.main-footer {
+    background: linear-gradient(270deg, #0c033e, #0d3609, #000000, #3e0202, #02004e, #000000);
+background-size: 1200% 1200%;
+
+-webkit-animation: Bummed 25s ease infinite;
+-moz-animation: Bummed 25s ease infinite;
+animation: Bummed 25s ease infinite;
+}
+
+@-webkit-keyframes Bummed {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Bummed {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Bummed {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+   
+
+
+.jumbotron {
+    align-items: center;
+    border: 3px;
+    border-color: #fff;
+    border-style: solid;
+
+    background: linear-gradient(270deg, #0c033e, #0d3609, #000000, #3e0202, #02004e, #000000);
+background-size: 1200% 1200%;
+
+-webkit-animation: Bummed 25s ease infinite;
+-moz-animation: Bummed 25s ease infinite;
+animation: Bummed 25s ease infinite;
+}
+
+@-webkit-keyframes Bummed {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Bummed {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Bummed {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Ends Gradient Animation ----------------------------------------------------------------------- */
+
+.navbar {
+
+    justify-content: center;
+}
+
+.card-deck {
+
+    padding-top: 1%;
+    margin: auto;
+    height: auto;
+    border: 3px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+#spotify-card,
+#youtube-card {
+    max-width: 600px;
+    color: white;
+
+
+
+}
+
+.mood-selector {
+
+    align-content: center;
+    vertical-align: 20%;
+    color: white;
+
+}
+
+
+
+
+.display-4 {
+    z-index: 6;
+    border: 3px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+#title-container {
+    background-image: url("../images/tim-mossholder.jpg");
+    max-width: 30%;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+
+
+
+}
+
+#moodDropdown {
+    left: auto;
+    color: white;
+    background-image: url(../images/tim-mossholder.jpg);
+    border: 2px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.btn {
+    color: white;
+}

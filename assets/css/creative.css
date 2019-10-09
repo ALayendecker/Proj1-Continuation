@@ -1,196 +1,160 @@
 body {
   background-color: black;
 }
-.main-body {
-  background: linear-gradient(
-    192deg,
-    #479681,
-    #7e2bc1,
-    #ffee00,
-    #b60561,
-    #1269b0
-  );
-  background-size: 1000% 1000%;
 
-  -webkit-animation: Creative 16s ease infinite;
-  -moz-animation: Creative 16s ease infinite;
-  animation: Creative 16s ease infinite;
+/* Anything until next comment contains gradient animation */
+.main-body {
+  background: linear-gradient(192deg, #479681, #7e2bc1, #ffee00, #b60561, #1269b0);
+background-size: 1000% 1000%;
+
+-webkit-animation: Creative 16s ease infinite;
+-moz-animation: Creative 16s ease infinite;
+animation: Creative 16s ease infinite;
 }
 
 @-webkit-keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
 }
 @-moz-keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
 }
 @keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+    
+    }
+
+.main-footer {
+  background: linear-gradient(192deg, #479681, #7e2bc1, #ffee00, #b60561, #1269b0);
+background-size: 1000% 1000%;
+
+-webkit-animation: Creative 16s ease infinite;
+-moz-animation: Creative 16s ease infinite;
+animation: Creative 16s ease infinite;
 }
 
-#moodDropdown {
-  left: auto;
-  color: white;
-  background-color: black;
+@-webkit-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
 }
-.dropdown-item {
-  color: white;
+@-moz-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
 }
+@keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+    
+    }
+
+
+.jumbotron {
+  align-items: center;
+  border: 3px;
+  border-color: #fff;
+  border-style: solid;
+
+  background: linear-gradient(192deg, #479681, #7e2bc1, #ffee00, #b60561, #1269b0);
+background-size: 1000% 1000%;
+
+-webkit-animation: Creative 16s ease infinite;
+-moz-animation: Creative 16s ease infinite;
+animation: Creative 16s ease infinite;
+}
+
+@-webkit-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes Creative {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+    
+    }
+
+/* Ends Gradient Animation ----------------------------------------------------------------------- */
 
 .navbar {
+
   justify-content: center;
 }
 
 .card-deck {
+
   padding-top: 1%;
   margin: auto;
-  height: 600px;
+  height: auto;
+  border: 3px;
+  border-color: #fff;
+  border-style: solid;
 }
 
 #spotify-card,
 #youtube-card {
   max-width: 600px;
   color: white;
+
+
+
 }
 
 .mood-selector {
+
   align-content: center;
   vertical-align: 20%;
+  color: white;
+
 }
 
-.main-footer {
-  background: linear-gradient(
-    192deg,
-    #479681,
-    #7e2bc1,
-    #ffee00,
-    #b60561,
-    #1269b0
-  );
-  background-size: 1000% 1000%;
 
-  -webkit-animation: Creative 16s ease infinite;
-  -moz-animation: Creative 16s ease infinite;
-  animation: Creative 16s ease infinite;
-}
 
-@-webkit-keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-@-moz-keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-@keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-
-.jumbotron {
-  align-items: center;
-
-  background: linear-gradient(
-    192deg,
-    #479681,
-    #7e2bc1,
-    #ffee00,
-    #b60561,
-    #1269b0
-  );
-  background-size: 1000% 1000%;
-
-  -webkit-animation: Creative 16s ease infinite;
-  -moz-animation: Creative 16s ease infinite;
-  animation: Creative 16s ease infinite;
-}
-
-@-webkit-keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-@-moz-keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-@keyframes Creative {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 51% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
 
 .display-4 {
   z-index: 6;
+  border: 3px;
+  border-color: #fff;
+  border-style: solid;
 }
 
 #title-container {
-  background-color: black;
+  background-image: url("../images/tim-mossholder.jpg");
   max-width: 30%;
   color: white;
   margin: 0 auto;
   text-align: center;
+
+
+
+}
+
+#moodDropdown {
+  left: auto;
+  color: white;
+  background-image: url(../images/tim-mossholder.jpg);
+  border: 2px;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.btn {
+  color: white;
 }
